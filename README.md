@@ -80,6 +80,9 @@ This software is not to be shared or copied without consent from the retailer.
 -------------------------------
 
 Rachel Vaney https://github.com/theroguemuppet/
+
 Jordan Parra https://github.com/Jordan-Parra/
+
 Vincent Nyugen https://github.com/vietcent/
+
 Patrick Morong https://github.com/pmorong/
