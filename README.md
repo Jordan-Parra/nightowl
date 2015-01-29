@@ -14,6 +14,7 @@ Couche-Tard Dashboard v0.1 Release Date 01/29/15
  * Troubleshooting
  * FAQ
  * License 
+ * Maintainers
  
 -------------------------------
           Overview 
@@ -73,3 +74,12 @@ A: Team Night Owl
 
 This software is solely licensed to XYZ. This license was issued 01/29/2015 and does not expire.
 This software is not to be shared or copied without consent from the retailer.
+
+-------------------------------
+          Maintainers
+-------------------------------
+
+Rachel Vaney https://github.com/theroguemuppet/
+Jordan Parra https://github.com/Jordan-Parra/
+Vincent Nyugen https://github.com/vietcent/
+Patrick Morong https://github.com/pmorong/
