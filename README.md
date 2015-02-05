@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/jordan-parra/nightowl.png?label=ready&title=Ready)](https://waffle.io/jordan-parra/nightowl)
 # nightowl
 repo for project night owl
 
