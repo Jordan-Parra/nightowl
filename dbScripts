@@ -1,6 +1,4 @@
-#
-# CREATE TABLE FOR GEOGRAPHIES
-#
+
 
 CREATE TABLE myCTGlobalFootprint (
      geoID INT NOT NULL AUTO_INCREMENT, 
@@ -8,9 +6,6 @@ CREATE TABLE myCTGlobalFootprint (
      PRIMARY KEY (geoID)
 );
 
-#
-# INSERT VALUES INTO GEOGRAPHIES
-#
 
 INSERT INTO myCTGlobalFootprint 
      (geoName)
@@ -21,9 +16,6 @@ VALUES
      ('Europe'),
      ('International Misc.');
 
-#
-#CREATE TABLE FOR BUSINESS UNITS
-#
 
 CREATE TABLE myCTBusinessUnits (
      unitID INT NOT NULL AUTO_INCREMENT, 
@@ -31,13 +23,8 @@ CREATE TABLE myCTBusinessUnits (
      unitPersonnelNum INT NOT NULL,
      geoID INT NOT NULL,
 
-     PRIMARY KEY (unitID),
-     FOREIGN KEY (geoID) REFERENCES myCTGlobalFootprint(geoID)
+     PRIMARY KEY (unitID)
 );
-
-#
-# INSERT VALUES INTO BUSINESS UNTS
-#
 
 INSERT INTO myCTBusinessUnits 
      (unitName, unitPersonnelNum, geoID)
@@ -52,23 +39,14 @@ VALUES
      ('Florida',44,2),
      ('Gulf Coast',220,2);
 
-#
-#CREATE TABLE FOR TEAMS
-#
-
 CREATE TABLE myCTTeams (
      teamID INT NOT NULL AUTO_INCREMENT, 
      unitID INT NOT NULL, 
      projectVolume INT NOT NULL,
      teamSize INT NOT NULL,
 
-     PRIMARY KEY (unitID),
-     FOREIGN KEY (unitID) REFERENCES myCTBusinessUnits(unitID)
+     PRIMARY KEY (teamID)
 );
-
-#
-# INSERT VALUES INTO TEAMS
-#
 
 INSERT INTO myCTTeams 
      (unitID, projectVolume, teamSize)
@@ -80,10 +58,6 @@ VALUES
      (7,3,1),
      (4,3,3);
 
-#
-#CREATE TABLE FOR PROJECTS
-#
-
 CREATE TABLE myCTProjects (
      projectID INT NOT NULL AUTO_INCREMENT, 
      projectName VARCHAR(40) NOT NULL,
@@ -94,14 +68,8 @@ CREATE TABLE myCTProjects (
      projectValue DECIMAL(13,2),
      teamAssigned INT NOT NULL, 
 
-     PRIMARY KEY (projectID),
-     FOREIGN KEY (teamAssigned) REFERENCES myCTTeams(teamID)
+     PRIMARY KEY (projectID)
 );
-
-
-#
-# INSERT VALUES INTO PROJECTS
-#
 
 INSERT INTO myCTProjects
      (projectName, projectType, projectDaysElapsed, projectOnSchedule, projectPriority, projectValue, teamAssigned)
@@ -112,10 +80,6 @@ VALUES
      ('Spiderman','CIP',15,1,3,10000,3),
      ('Joker','CIP',15,1,3,10000,3);
 
-#
-#CREATE TABLE FOR ISSUES
-#
-
 CREATE TABLE myCTIssues (
      issueID INT NOT NULL AUTO_INCREMENT, 
      issueType VARCHAR(40) NOT NULL,
@@ -123,50 +87,28 @@ CREATE TABLE myCTIssues (
      estimatedLoss DECIMAL(13,2),
      teamAssigned INT NOT NULL, 
 
-     PRIMARY KEY (issueID),
-     FOREIGN KEY (teamAssigned) REFERENCES myCTTeams(teamID)
+     PRIMARY KEY (issueID)
 );
-
-#
-# INSERT VALUES INTO ISSUES
-#
 
 INSERT INTO myCTIssues
      (issueType, usersAffected, estimatedLoss, teamAssigned)
 
 VALUES 
-     ('Couche-Tard','CIP',15,1,3,10000,3),
-     ('Batman','CIP',15,1,3,10000,3),
-     ('Spiderman','CIP',15,1,3,10000,3),
-     ('Joker','CIP',15,1,3,10000,3);
+     ('Couche-Tard',3,15,1),
+     ('Couche-Tard',3,15,1),
+     ('Couche-Tard',3,15,1),
+     ('Couche-Tard',3,15,1);
 
-
-
-#
-#CREATE TABLE FOR PERSONNEL
-#
-
-CREATE TABLE myCTITPersonnel (
+CREATE TABLE myCTIPersonnel (
      userID INT NOT NULL AUTO_INCREMENT, 
      firstName VARCHAR(40) NOT NULL,
-     lastName VARCHAR(40) NOT NULL,
-     isManager TINYINT NOT NULL,
-     teamID INTO NOT NULL, 
+     lastName INT NOT NULL, 
+     isManager INT NOT NULL,
+     teamID INT NOT NULL, 
 
-     PRIMARY KEY (userID),
-     FOREIGN KEY (teamID) REFERENCES myCTTeams(teamID)
+     PRIMARY KEY (userID)
 );
 
-#
-# INSERT VALUES INTO PERSONNEL
-#
 
-INSERT INTO myCTITPersonnel
-     (firstName, lastName, isManager, teamID)
 
-VALUES 
-     ('Steven','Jones',0,3),
-     ('Heather','Stevens',1,3),
-     ('Kobe','Bryant',0,3),
-     ('Hat','Hatterson',0,3);
-#
+
