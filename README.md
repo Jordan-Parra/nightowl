@@ -11,17 +11,12 @@ Couche-Board is a browser-based GUI dashboard that will allow Couche-Tard manage
 
 Visit [couche-board.herokuapp.com](https://couche-board.herokuapp.com) to use our version of the Couche-Board application.
 
-##Technology Stack
-* **Ubuntu 14.04 LTS (Trusty)**
-* **Phusion Passenger**
-* **PostgreSQL**
-* **Ruby**
-* **Rails**
-* **Bootstrap**
  
 ##Development Environment
 
-For the sake of a consistent environment, we recommend that you use the browser-based IDE, [Cloud9](https://c9.io/), as your development environment.
+###Cloud9 IDE
+
+For the sake of a consistent environment, we recommend that you use the browser-based IDE, [Cloud9](https://c9.io/), as your development environment. Cloud9 is a very useful service because it gives developers access to a cloud-based environment with commonly used tools and software.
 
 Here is list of instructions to get started with Cloud9:
 
@@ -36,14 +31,42 @@ Here is list of instructions to get started with Cloud9:
 6. Select your workspace from the left-hand navigation
 7. Click "START EDITING"
 8. Switch to the new tab where your workspace is loaded
-   
-Before you start to work with our rails applciation, it would be helpful to run the following command in the terminal:
-```
-$ bundle install
-```
-This will install the dependencies that the project relies on.
+ 
+You will see in your workspace that you have the repository loaded into the file explorer along the left side. 
 
-On that note, you are good to go!
+###Technology Stack
+
+* **Ubuntu 14.04**
+* **Phusion Passenger**
+* **PostgreSQL 9.3.5**
+* **Ruby 2.1.5**
+* **Rails 4.2.0**
+ 
+This is the stack used in production. For development and testing, we will use this stack with the exception of Phusion Passenger, in which case the default WeBrick web server will suffice.
+
+By using Cloud9, you have most of the software in the technology stack installed. The exception being the correct version of Rails, which you will install with the help of [Bundler](http://bundler.io/) and [RVM](https://rvm.io/) in the next section.
+
+###Rails/Dependency Installation
+
+At this time, Cloud9 has Rails 4.1.6 preinstalled, but we use Rails 4.2.0, so it's best to have that version instead. In this section, we will install Rails along with all the other project dependencies in our Cloud9 environment.
+
+[RVM](https://rvm.io/) (Ruby enVironment Manager) is a useful tool to pick and choose which ruby version and set of gems (a.k.a. gemsets) that you would like to have loaded in your environment. RVM is preinstalled in your Cloud9 environment, so we can start using it immediately.
+
+```
+# Create a project specific gemset
+$ rvm gemset create nightowl
+
+# Switch to the gemset
+$ rvm gemset use nightowl
+
+# rails4 should have been the gemset you were in before the switch to nightowl
+# Delete that gemset to free up the limited disk space you have in Cloud9
+$ rvm gemset delete rails4
+
+# Use Bundler to install all the non-production group dependencies in the Gemfile, which includes Rails 4.2.0
+# Make sure to run this command in the root directory of the Rails app that contains the Gemfile
+$ bundle install --without production
+```
 
 ##Database Setup
 
@@ -105,11 +128,13 @@ Populating the database
 
 ##Authors
 
-* [Patrick Morong](https:github.com/pmorong)  
-* [Vincent Nguyen](https:github.com/vietcent)  
-* [Jordan Parra](https:github.com/Jordan-Parra)  
-* [Rachel Vaney](https:github.com/theroguemuppet)
+* [Patrick Morong](https://github.com/pmorong)  
+* [Vincent Nguyen](https://github.com/vietcent)  
+* [Jordan Parra](https://github.com/Jordan-Parra)  
+* [Rachel Vaney](https://ithub.com/theroguemuppet)
 
+##Videos
+https://www.youtube.com/watch?v=_DsjgyGgHZA
 
 ##Thanks
 
