@@ -140,6 +140,3 @@ https://www.youtube.com/watch?v=_DsjgyGgHZA
 
 * Ric Spargo
 * Joe Clark
-
-
-
