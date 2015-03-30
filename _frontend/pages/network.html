@@ -11,20 +11,19 @@
 
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
-    <!-- Bootstrap Core CSS -->
+	<!--[if lte IE 8]><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/excanvas.js"></script><![endif]-->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+	<script type="text/javascript" src="../flot/jquery.flot.js"></script>
+	<script type="text/javascript" src="../flot/jquery.flot.pie.js"></script>
+    
+	<!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
     <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
-    <!-- Timeline CSS -->
-    <link href="../css/timeline.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -35,6 +34,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+
 
 </head>
 
@@ -265,6 +266,7 @@
             </ul>
             <!-- /.navbar-top-links -->
 
+            
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
@@ -283,70 +285,37 @@
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i>Metrics<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Flot Charts</a>
+                                    <a href="support.html">IT Support</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Morris.js Charts</a>
+                                    <a href="network.html">Network Uptime</a>
                                 </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="panels-wells.html">Panels and Wells</a>
+								<li>
+                                    <a href="finance.html">Finance</a>
+                                </li>
+								<li>
+                                    <a href="hr.html">Human Resource</a>
+                                </li>
+								<li>
+                                    <a href="projects.html">Projects</a>
                                 </li>
                                 <li>
-                                    <a href="buttons.html">Buttons</a>
-                                </li>
-                                <li>
-                                    <a href="notifications.html">Notifications</a>
-                                </li>
-                                <li>
-                                    <a href="typography.html">Typography</a>
-                                </li>
-                                <li>
-                                    <a href="icons.html"> Icons</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grid</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level <span class="fa arrow"></span></a>
+                                    <a href="#">Arizona<span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level">
                                         <li>
-                                            <a href="#">Third Level Item</a>
+                                            <a href="#">Scottsdale<span class="fa arrow"></span></a>
                                         </li>
                                         <li>
-                                            <a href="#">Third Level Item</a>
+                                            <a href="blank.html">Tempe</a>
                                         </li>
                                         <li>
-                                            <a href="#">Third Level Item</a>
+                                            <a href="#">Glendale</a>
                                         </li>
                                         <li>
-                                            <a href="#">Third Level Item</a>
+                                            <a href="#">Mesa</a>
                                         </li>
                                     </ul>
                                     <!-- /.nav-third-level -->
@@ -357,9 +326,6 @@
                         <li>
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="blank.html">Blank Page</a>
-                                </li>
                                 <li>
                                     <a href="login.html">Login Page</a>
                                 </li>
@@ -373,120 +339,70 @@
             <!-- /.navbar-static-side -->
         </nav>
 
+        <!-- Page Content -->
         <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Flot</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+					
+                        <h1 class="page-header">Network Uptime</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+
                 </div>
-                <!-- /.col-lg-12 -->
+                <!-- /.row -->
             </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-12">
+            <!-- /.container-fluid -->
+				<div class="col-lg-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Line Chart Example
+                            WAN Uptime
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-line-chart"></div>
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-pills">
+                                <li class="active"><a href="#tor-pills" data-toggle="tab">Toronto</a>
+                                </li>
+                                <li><a href="#laval-pills" data-toggle="tab">Laval</a>
+                                </li>
+                                <li><a href="#us-pills" data-toggle="tab">United States</a>
+                                </li>
+                                <li><a href="#sanford-pills" data-toggle="tab">Sanford</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="tor-pills">
+                                    <h4>Home Tab</h4>
+									<div id="midWestPie" style="width:400px;height:300px"></div>
+                                   </div>
+                                <div class="tab-pane fade" id="laval-pills">
+                                    <h4>Profile Tab</h4>
+									
+									<div id="midWestHold" style="width: 450px; height: 200px;"></div>
+                                    </div>
+                                <div class="tab-pane fade" id="us-pills">
+                                    <h4>Calls PSP</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+								<div class="tab-pane fade" id="sanford-pills">
+                                    <h4>Calls PSP</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
                             </div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
                 </div>
-                <!-- /.col-lg-12 -->
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Pie Chart Example
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-pie-chart"></div>
-                            </div>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Multiple Axes Line Chart Example
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-line-chart-multi"></div>
-                            </div>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Moving Line Chart Example
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-line-chart-moving"></div>
-                            </div>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Bar Chart Example
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-bar-chart"></div>
-                            </div>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-6 -->
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Flot Charts Usage
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <p>Flot is a pure JavaScript plotting library for jQuery, with a focus on simple usage, attractive looks, and interactive features. In SB Admin, we are using the most recent version of Flot along with a few plugins to enhance the user experience. The Flot plugins being used are the tooltip plugin for hoverable tooltips, and the resize plugin for fully responsive charts. The documentation for Flot Charts is available on their website, <a target="_blank" href="http://www.flotcharts.org/">http://www.flotcharts.org/</a>.</p>
-                            <a target="_blank" class="btn btn-default btn-lg btn-block" href="http://www.flotcharts.org/">View Flot Charts Documentation</a>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-6 -->
-            </div>
-            <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
 
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -494,17 +410,50 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
-    <!-- Flot Charts JavaScript -->
-    <script src="../bower_components/flot/excanvas.min.js"></script>
-    <script src="../bower_components/flot/jquery.flot.js"></script>
-    <script src="../bower_components/flot/jquery.flot.pie.js"></script>
-    <script src="../bower_components/flot/jquery.flot.resize.js"></script>
-    <script src="../bower_components/flot/jquery.flot.time.js"></script>
-    <script src="../bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-    <script src="../js/flot-data.js"></script>
-
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
+	
+	<script type="text/javascript">
+var d1 = [[1, 300], [2, 600], [3, 550], [4, 400], [5, 300]];
+ 
+$(document).ready(function () {
+    $.plot($("#midWestHold"), [d1]);
+});
+
+var dataSet = [
+    {label: "Under 3 Minutes", data: 98.7, color: "#005CDE" },
+    {data: 2.3, color: "red" },
+   
+];
+
+function labelFormatter(label, series) {
+    return "<div style='font-size:14pt; text-align:center; padding:2px; color:black;'>"
++ label + "<br/>" + (series.data[0][1]) + "%</div>";
+}
+
+var options = {
+    series: {
+        pie: {
+			startAngle: 1,
+            show: true,
+            radius: 3/4,
+            label: {
+                show: true,
+				threshold: .03,
+                radius: 1,
+                formatter: labelFormatter,
+            }
+        }
+    },
+    legend: {
+        show: false
+    }
+};
+
+$(document).ready(function () {
+    $.plot($("#midWestPie"), dataSet, options);
+});
+</script>
 
 </body>
 
